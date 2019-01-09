@@ -5,7 +5,7 @@ export default () => (
   <div className={styles.root}>
     <div className={styles.box}>
       <h1>
-        LOADING LIVE DEMO
+        LOADING BLOCKS
       </h1>
       <div className={styles.bouncing}>
         <div />
