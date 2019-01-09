@@ -1,6 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import Loader from './components/Loader';
+import './styles/index.less';
 
 console.log('shit');
 
