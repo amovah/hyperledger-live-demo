@@ -23,12 +23,16 @@ class Loader extends Component {
   render() {
     return (
       <div className={styles.root}>
-        <h2>
-          LOADING LIVE DEMO
-        </h2>
-        <p>
-          {this.state.loadingDots}
-        </p>
+        <div className={styles.box}>
+          <h1>
+            LOADING LIVE DEMO
+          </h1>
+          <div className={styles.bouncing}>
+            <div />
+            <div />
+            <div />
+          </div>
+        </div>
       </div>
     );
   }
