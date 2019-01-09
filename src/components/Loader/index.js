@@ -6,6 +6,20 @@ class Loader extends Component {
     loadingDots: '.',
   }
 
+  inter = null;
+
+  componentDidMount() {
+    this.inter = setInterval(() => {
+      this.setState(prev => ({
+        loadingDots: prev.loadingDots.length > 5 ? '.' : `${prev.loadingDots}.`,
+      }));
+    }, 350);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.inter);
+  }
+
   render() {
     return (
       <div className={styles.root}>
