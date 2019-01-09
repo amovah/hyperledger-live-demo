@@ -13,7 +13,7 @@ class Loader extends Component {
       this.setState(prev => ({
         loadingDots: prev.loadingDots.length > 5 ? '.' : `${prev.loadingDots}.`,
       }));
-    }, 350);
+    }, 500);
   }
 
   componentWillUnmount() {
