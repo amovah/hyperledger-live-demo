@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
-import toggleShowing from 'Root/actions/blocks/toggleShowing';
 import styles from './index.less';
 
 class Block extends Component {
+  state = {
+    showing: false,
+  }
+
   container = React.createRef();
 
   componentDidMount() {
@@ -10,12 +13,18 @@ class Block extends Component {
     this.container.current.style.setProperty('--max-height', `${height}px`);
   }
 
+  toggleShowing = () => {
+    this.setState(prev => ({
+      showing: !prev.showing,
+    }));
+  }
+
   render() {
     const {
       data,
     } = this.props;
 
-    const css = data.showing ? `${styles.active} ${styles.container}` : styles.container;
+    const css = this.state.showing ? ` ${styles.container} ${styles.active}` : styles.container;
 
     return (
       <div
@@ -23,7 +32,7 @@ class Block extends Component {
       >
         <div
           className={styles.header}
-          onClick={() => toggleShowing(data.blockhash)}
+          onClick={this.toggleShowing}
         >
           <p>
             {data.blocknum}

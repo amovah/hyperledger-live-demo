@@ -5,9 +5,6 @@ import sample from './sample';
 export default async () => {
   store.dispatch({
     type: types.blocks.LOAD,
-    data: sample.rows.sort((a, b) => a.blocknum - b.blocknum).map(i => ({
-      ...i,
-      showing: false,
-    })),
+    data: sample.rows.sort((a, b) => a.blocknum - b.blocknum),
   });
 };
