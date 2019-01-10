@@ -4,9 +4,14 @@ import styles from './index.less';
 export default (props) => {
   return (
     <div className={styles.container}>
-      <p className={styles.header}>
-        {props.data.blocknum}
-      </p>
+      <div className={styles.header}>
+        <p>
+          {props.data.blocknum}
+        </p>
+      </div>
+      <div className={styles.content}>
+        a
+      </div>
     </div>
   );
 };

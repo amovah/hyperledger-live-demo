@@ -1,6 +1,8 @@
 @import '~Root/styles/colors';
 @import '~Root/styles/mixins';
 
+@init: 75px;
+
 :local(.container) {
   border: 4px solid @color-dark;
   margin: 0px 25px;
@@ -8,6 +10,8 @@
   transition: all 0.3s;
   display: flex;
   flex-direction: column;
+  height: @init;
+  width: @init;
 
   &:hover {
     border-color: @color-darker;
@@ -19,8 +23,22 @@
   }
 
   > .header {
-    padding: 25px;
+    width: @init;
+    height: @init;
+    box-sizing: border-box;
     cursor: pointer;
     transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  > .content {
+    height: 0px;
+    overflow: hidden;
   }
 }
+
+// :local(.active) {
+//   height: 500px !important;
+// }
