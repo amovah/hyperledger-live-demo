@@ -24,7 +24,7 @@ class Block extends Component {
       data,
     } = this.props;
 
-    const css = this.state.showing ? ` ${styles.container} ${styles.active}` : styles.container;
+    const css = this.state.showing ? `${styles.active} ${styles.container}` : styles.container;
 
     return (
       <div
