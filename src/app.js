@@ -3,6 +3,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import Loader from './components/Loader';
 import App from './App';
+import loadBlocks from './actions/blocks/load';
 import './styles/index.less';
 
 render(
@@ -11,6 +12,8 @@ render(
 );
 
 (async () => {
+  await loadBlocks();
+
   render(
     <App />,
     global.document.getElementById('main'),
