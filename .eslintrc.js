@@ -9,5 +9,6 @@ module.exports = {
     'react/prop-types': 0,
     'react/jsx-filename-extension': 0,
     'react/destructuring-assignment': 0,
+    'operator-assignment': [2, 'never'],
 	},
 };
