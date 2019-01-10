@@ -13,7 +13,7 @@ export default (state = [], action) => {
         ...state.slice(0, index),
         {
           ...state[index],
-          active: !state[index].active,
+          showing: !state[index].showing,
         },
         ...state.slice(index + 1),
       ];
