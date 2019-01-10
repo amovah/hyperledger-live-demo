@@ -1,2 +1,26 @@
 @import '~Root/styles/colors';
 @import '~Root/styles/mixins';
+
+:local(.container) {
+  border: 4px solid @color-dark;
+  margin: 0px 25px;
+  font-size: 1.5rem;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    border-color: @color-darker;
+
+    & > .header {
+      background-color: @color-dark;
+      color: white;
+    }
+  }
+
+  > .header {
+    padding: 25px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+}
