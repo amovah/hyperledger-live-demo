@@ -1,0 +1,30 @@
+@import '~Root/styles/colors';
+@import '~Root/styles/mixins';
+
+:local(.container) {
+  display: grid;
+  grid-template-columns: 100px 1fr 100px;
+}
+
+.arrows() {
+  background-color: darken(@color-background, 8%);
+  min-height: ~'calc(100vh - 100px)';
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken(@color-background, 15%);
+  }
+}
+
+:local(.left) {
+  .arrows();
+}
+
+:local(.right) {
+  .arrows();
+}
