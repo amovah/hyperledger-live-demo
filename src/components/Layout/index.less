@@ -1,0 +1,20 @@
+@import '~Root/styles/colors';
+@import '~Root/styles/mixins';
+
+:local(.header) {
+  background-color: white;
+  width: 100vw;
+  text-align: center;
+  padding: 30px;
+  height: 100px;
+  box-sizing: border-box;
+
+  .shallowShadow();
+}
+
+:local(.container) {
+  background-color: @color-background;
+  padding: 35px;
+  min-height: ~'calc(100vh - 100px)';
+  box-sizing: border-box;
+}
