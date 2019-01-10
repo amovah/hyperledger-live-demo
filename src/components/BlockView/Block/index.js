@@ -15,9 +15,11 @@ class Block extends Component {
       data,
     } = this.props;
 
+    const css = data.showing ? `${styles.active} ${styles.container}` : styles.container;
+
     return (
       <div
-        className={styles.container}
+        className={css}
       >
         <div
           className={styles.header}
