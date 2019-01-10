@@ -1,5 +1,5 @@
 import types from 'Root/actions';
-import store from '../../store';
+import store from 'Root/store';
 import sample from './sample';
 
 export default async () => {
@@ -7,7 +7,7 @@ export default async () => {
     type: types.blocks.LOAD,
     data: sample.rows.sort((a, b) => a.blocknum - b.blocknum).map(i => ({
       ...i,
-      active: false,
+      showing: false,
     })),
   });
 };
