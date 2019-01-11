@@ -24,6 +24,15 @@
 :local(.content) {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: baseline;
   overflow: hidden;
+}
+
+:local(.wrapper) {
+  height: ~'calc(100vh - 100px)';
+  overflow: hidden;
+}
+
+:local(.takeSpace) {
+  height: 45%;
 }

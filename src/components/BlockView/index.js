@@ -23,8 +23,11 @@ class BlockView extends Component {
         >
           <FontAwesomeIcon icon={faArrowLeft} size="4x" />
         </div>
-        <div className={styles.content} ref={this.content}>
-          {this.props.blocks.map(i => <Block key={generate()} data={i} />)}
+        <div className={styles.wrapper}>
+          <div className={styles.takeSpace} />
+          <div className={styles.content} ref={this.content}>
+            {this.props.blocks.map(i => <Block key={generate()} data={i} />)}
+          </div>
         </div>
         <div
           className={styles.arrow}
