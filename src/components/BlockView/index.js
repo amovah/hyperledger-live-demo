@@ -21,6 +21,7 @@ class BlockView extends Component {
           className={styles.arrow}
           onClick={() => this.move(-200)}
         >
+          <div className={styles.takeSpace} />
           <FontAwesomeIcon icon={faArrowLeft} size="4x" />
         </div>
         <div className={styles.wrapper}>
@@ -33,6 +34,7 @@ class BlockView extends Component {
           className={styles.arrow}
           onClick={() => this.move(200)}
         >
+          <div className={styles.takeSpace} />
           <FontAwesomeIcon icon={faArrowRight} size="4x" />
         </div>
       </div>
