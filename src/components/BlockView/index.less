@@ -1,11 +1,6 @@
 @import '~Root/styles/colors';
 @import '~Root/styles/mixins';
 
-:local(.container) {
-  display: grid;
-  grid-template-columns: 100px 1fr 100px;
-}
-
 :local(.arrow) {
   background-color: darken(@color-background, 8%);
   min-height: ~'calc(100vh - 100px)';
@@ -27,9 +22,10 @@
   align-items: flex-start;
 }
 
-:local(.wrapper) {
+:local(.container) {
   height: ~'calc(100vh - 100px)';
   overflow-x: auto;
+  background-color: @color-background;
 }
 
 :local(.takeSpace) {
@@ -41,4 +37,11 @@
   justify-content: center;
   align-items: center;
   height: 75px;
+}
+
+:local(.addition) {
+  width: 50px;
+  height: 10px;
+  opacity: 0;
+  pointer-events: none;
 }

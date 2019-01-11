@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { connect } from 'react-redux';
 import { generate } from 'shortid';
 import scroll from 'Root/helpers/scroll';
@@ -17,42 +17,32 @@ class BlockView extends Component {
   render() {
     return (
       <div className={styles.container}>
-        <div
-          className={styles.arrow}
-          onClick={() => this.move(-200)}
-        >
-          <div className={styles.takeSpace} />
-          <FontAwesomeIcon icon={faArrowLeft} size="4x" />
-        </div>
-        <div className={styles.wrapper}>
-          <div className={styles.takeSpace} />
-          <div className={styles.content} ref={this.content}>
-            {this.props.blocks.map((i, index) => (
-              <Fragment key={generate()}>
-                <Block data={i} />
-                {
+        <div className={styles.takeSpace} />
+        <div className={styles.content} ref={this.content}>
+          <span className={styles.addition}>
+            being there
+          </span>
+          {this.props.blocks.map((i, index) => (
+            <Fragment key={generate()}>
+              <Block data={i} />
+              {
                   index + 1 !== this.props.blocks.length
-                  && (
-                    <div
-                      className={styles.connection}
-                    >
-                      <FontAwesomeIcon
-                        icon={faArrowLeft}
-                        size="2x"
-                      />
-                    </div>
-                  )
-                }
-              </Fragment>
-            ))}
-          </div>
-        </div>
-        <div
-          className={styles.arrow}
-          onClick={() => this.move(200)}
-        >
-          <div className={styles.takeSpace} />
-          <FontAwesomeIcon icon={faArrowRight} size="4x" />
+                && (
+                  <div
+                    className={styles.connection}
+                  >
+                    <FontAwesomeIcon
+                      icon={faArrowLeft}
+                      size="2x"
+                    />
+                  </div>
+                )
+              }
+            </Fragment>
+          ))}
+          <span className={styles.addition}>
+            being there
+          </span>
         </div>
       </div>
     );

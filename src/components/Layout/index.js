@@ -8,8 +8,6 @@ export default props => (
         {'hyperledger blockchain live demo'.toUpperCase()}
       </h1>
     </div>
-    <div className={styles.container}>
-      {props.children}
-    </div>
+    {props.children}
   </div>
 );
