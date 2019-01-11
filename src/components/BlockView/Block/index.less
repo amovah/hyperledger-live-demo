@@ -59,7 +59,7 @@
 
 @activeMode: 475px;
 @activePadding: 20px;
-@activeHeight: 300px;
+@activeHeight: 275px;
 
 :local(.active) {
   width: @activeMode + @activePadding;
@@ -74,5 +74,13 @@
     // height: calc(~'var(--max-height) +' @activePadding);
     height: @activeHeight + @activePadding;
     padding: @activePadding;
+  }
+}
+
+:local(.scope) {
+  margin-bottom: 25px;
+
+  h3 {
+    margin-bottom: 5px;
   }
 }

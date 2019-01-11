@@ -59,6 +59,15 @@ class Block extends Component {
               {data.prehash || 'None'}
             </p>
           </div>
+
+          <div className={styles.scope}>
+            <h3>
+              Previous Block Hash:
+            </h3>
+            <p>
+              {new Date(data.createdt).toDateString()}
+            </p>
+          </div>
         </div>
       </div>
     );
