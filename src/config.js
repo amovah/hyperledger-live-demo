@@ -1,4 +1,4 @@
-let config = {
+const config = {
   prodCDN: '',
   devCDN: `http://localhost:${process.env.NODE_PORT}/static`,
 };
