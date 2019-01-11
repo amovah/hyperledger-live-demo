@@ -62,7 +62,16 @@ class Block extends Component {
 
           <div className={styles.scope}>
             <h3>
-              Previous Block Hash:
+              Data Hash:
+            </h3>
+            <p>
+              {data.datahash}
+            </p>
+          </div>
+
+          <div className={styles.scope}>
+            <h3>
+              Create Date:
             </h3>
             <p>
               {new Date(data.createdt).toDateString()}
