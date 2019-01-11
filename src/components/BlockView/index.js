@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { connect } from 'react-redux';
@@ -27,7 +27,21 @@ class BlockView extends Component {
         <div className={styles.wrapper}>
           <div className={styles.takeSpace} />
           <div className={styles.content} ref={this.content}>
-            {this.props.blocks.map(i => <Block key={generate()} data={i} />)}
+            {this.props.blocks.map(i => (
+              <Fragment>
+                <Block key={generate()} data={i} />
+                <div
+                  className={styles.connection}
+                  key={generate()}
+                >
+                  <FontAwesomeIcon
+                    icon={faArrowLeft}
+                    size="2x"
+                    key={generate()}
+                  />
+                </div>
+              </Fragment>
+            ))}
           </div>
         </div>
         <div
