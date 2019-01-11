@@ -42,9 +42,23 @@ class Block extends Component {
           className={styles.content}
           ref={this.container}
         >
-          <p>
-            ye alame data qarare inja bashe
-          </p>
+          <div className={styles.scope}>
+            <h3>
+              Block Hash:
+            </h3>
+            <p>
+              {data.blockhash}
+            </p>
+          </div>
+
+          <div className={styles.scope}>
+            <h3>
+              Previous Block Hash:
+            </h3>
+            <p>
+              {data.prehash || 'None'}
+            </p>
+          </div>
         </div>
       </div>
     );
