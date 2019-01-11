@@ -3,13 +3,22 @@
 
 @init: 75px;
 
+.anim() {
+  transition: color 0.3s,
+    background-color 0.3s,
+    width 0.7s ease,
+    height 0.7s ease,
+    border-color 0.3s;
+}
+
 :local(.container) {
   border: 4px solid @color-dark;
   margin: 0px 25px;
   font-size: 1.5rem;
-  transition: all 0.3s;
   display: flex;
   flex-direction: column;
+
+  .anim();
 
   &:hover {
     border-color: @color-darker;
@@ -25,16 +34,18 @@
     height: @init;
     box-sizing: border-box;
     cursor: pointer;
-    transition: all 0.3s;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    .anim();
   }
 
   > .content {
     height: 0px;
     overflow: hidden;
-    transition: all 0.3s;
+
+    .anim();
   }
 }
 
