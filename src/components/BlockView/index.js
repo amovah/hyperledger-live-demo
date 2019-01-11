@@ -28,19 +28,17 @@ class BlockView extends Component {
           <div className={styles.takeSpace} />
           <div className={styles.content} ref={this.content}>
             {this.props.blocks.map((i, index) => (
-              <Fragment>
-                <Block key={generate()} data={i} />
+              <Fragment key={generate()}>
+                <Block data={i} />
                 {
                   index + 1 !== this.props.blocks.length
                   && (
                     <div
                       className={styles.connection}
-                      key={generate()}
                     >
                       <FontAwesomeIcon
                         icon={faArrowLeft}
                         size="2x"
-                        key={generate()}
                       />
                     </div>
                   )
