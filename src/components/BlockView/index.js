@@ -11,7 +11,7 @@ class BlockView extends Component {
   content = React.createRef();
 
   move = (amount) => {
-    scroll(this.content.current, amount, 200);
+    scroll(this.content.current, amount, 250);
   }
 
   render() {
@@ -19,7 +19,7 @@ class BlockView extends Component {
       <div className={styles.container}>
         <div
           className={styles.arrow}
-          onClick={() => this.move(200)}
+          onClick={() => this.move(-200)}
         >
           <FontAwesomeIcon icon={faArrowLeft} size="4x" />
         </div>
@@ -31,7 +31,7 @@ class BlockView extends Component {
         </div>
         <div
           className={styles.arrow}
-          onClick={() => this.move(-200)}
+          onClick={() => this.move(200)}
         >
           <FontAwesomeIcon icon={faArrowRight} size="4x" />
         </div>
