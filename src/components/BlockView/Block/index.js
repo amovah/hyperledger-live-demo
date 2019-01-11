@@ -42,7 +42,9 @@ class Block extends Component {
           className={styles.content}
           ref={this.container}
         >
-          a
+          <p>
+            ye alame data qarare inja bashe
+          </p>
         </div>
       </div>
     );

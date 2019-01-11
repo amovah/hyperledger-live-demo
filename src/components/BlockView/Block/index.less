@@ -10,8 +10,8 @@
   transition: all 0.3s;
   display: flex;
   flex-direction: column;
-  height: @init;
-  width: @init;
+  // height: @init;
+  // width: @init;
 
   &:hover {
     border-color: @color-darker;
@@ -36,10 +36,21 @@
   > .content {
     height: 0;
     overflow: hidden;
+    transition: all 0.3s;
   }
 }
 
+@activeMode: 350px;
 
 :local(.active) {
-  color: red;
+  width: @activeMode;
+  height: calc(~'var(--max-height) +' @init);
+
+  > .header {
+    width: @activeMode;
+  }
+
+  > .content {
+    height: var(--max-height);
+  }
 }
