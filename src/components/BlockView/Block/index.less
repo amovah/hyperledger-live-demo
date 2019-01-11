@@ -1,12 +1,14 @@
 @import '~Root/styles/colors';
 @import '~Root/styles/mixins';
 
-.anim() {
-  transition+: color 0.3s,
-    background-color 0.3s,
-    width 0.7s ease,
-    height 0.7s ease,
-    border-color 0.3s;
+.coming() {
+  transition+: width 0.7s ease,
+    height 0.7s ease;
+}
+
+.going() {
+  transition+: width 0.7s ease 0.7s,
+    height 0.7s ease 0.7s;
 }
 
 @init: 75px;
@@ -18,7 +20,8 @@
   flex-direction: column;
   width: @init;
 
-  .anim();
+  .going();
+  transition+: border-color 0.3s;
 
   &:hover {
     border-color: @color-darker;
@@ -37,22 +40,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition+: color 0.3s, background-color 0.3s;
 
-    .anim();
+    .going();
   }
 
   > .content {
     height: 0px;
     overflow: hidden;
     box-sizing: border-box;
-    transition+: padding 0.7s;
     font-size: 1.2rem;
+    opacity: 0;
+
+    transition+: padding 0.7s, opacity 0.7s;
+    .going();
 
     p {
       word-wrap: break-word;
     }
-
-    .anim();
   }
 }
 
@@ -62,16 +67,22 @@
 
 :local(.active) {
   width: @activeMode + @activePadding;
+  .coming();
 
   > .header {
     width: @activeMode + @activePadding;
     background-color: @color-dark;
     color: white;
+
+    .coming();
   }
 
   > .content {
     height: @activeHeight + @activePadding;
     padding: @activePadding;
+    opacity: 1;
+    transition+: opacity 0.7s 0.7s;
+    .coming();
   }
 }
 
