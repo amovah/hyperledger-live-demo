@@ -71,6 +71,15 @@ class Block extends Component {
 
           <div className={styles.scope}>
             <h3>
+              Transaction Count:
+            </h3>
+            <p>
+              {data.txcount}
+            </p>
+          </div>
+
+          <div className={styles.scope}>
+            <h3>
               Create Date:
             </h3>
             <p>
