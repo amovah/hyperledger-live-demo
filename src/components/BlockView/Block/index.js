@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import moment from 'moment';
 import styles from './index.less';
 
 class Block extends Component {
@@ -83,7 +84,7 @@ class Block extends Component {
               Create Date:
             </h3>
             <p>
-              {new Date(data.createdt).toDateString()}
+              {moment(data.created).format('dddd, MMMM Do YYYY, h:mm:ss a')}
             </p>
           </div>
         </div>
