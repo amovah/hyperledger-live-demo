@@ -5,7 +5,7 @@ export default props => (
   <div>
     <div className={styles.header}>
       <h1>
-        LIVE DEMO
+        {'hyperledger blockchain live demo'.toUpperCase()}
       </h1>
     </div>
     <div className={styles.container}>
