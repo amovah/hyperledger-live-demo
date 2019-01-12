@@ -2,7 +2,6 @@ import React, { Component, Fragment } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { connect } from 'react-redux';
-import { generate } from 'shortid';
 import scroll from 'Root/helpers/scroll';
 import Block from './Block';
 import styles from './index.less';
@@ -23,7 +22,7 @@ class BlockView extends Component {
             being there
           </span>
           {this.props.blocks.map((i, index) => (
-            <Fragment key={generate()}>
+            <Fragment key={i.blockhash}>
               <Block data={i} />
               {
                   index + 1 !== this.props.blocks.length
