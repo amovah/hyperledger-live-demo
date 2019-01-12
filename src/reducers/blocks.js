@@ -13,6 +13,13 @@ export default (state = {
       };
     }
 
+    case types.blocks.NEW: {
+      return {
+        ...state,
+        news: [...state.news, ...action.news],
+      };
+    }
+
     default: {
       return state;
     }
