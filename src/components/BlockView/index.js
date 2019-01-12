@@ -25,7 +25,7 @@ class BlockView extends Component {
             <Fragment key={i.blockhash}>
               <Block data={i} />
               {
-                  index + 1 !== this.props.blocks.length
+                index + 1 !== this.props.blocks.length
                 && (
                   <div
                     className={styles.connection}
