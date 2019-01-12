@@ -1,9 +1,16 @@
 import types from 'Root/actions';
 
-export default (state = [], action) => {
+export default (state = {
+  data: [],
+  news: [],
+  lastPolling: 0,
+}, action) => {
   switch (action.type) {
     case types.blocks.LOAD: {
-      return action.data;
+      return {
+        ...state,
+        data: action.data,
+      };
     }
 
     default: {
