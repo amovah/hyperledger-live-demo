@@ -27,7 +27,7 @@ class BlockView extends Component {
                 index !== 0
                 && (
                   <div
-                    className={styles.connection}
+                    className={`${styles.connection} ${i.new && styles.new}`}
                   >
                     <FontAwesomeIcon
                       icon={faArrowLeft}
@@ -36,7 +36,7 @@ class BlockView extends Component {
                   </div>
                 )
               }
-              <Block data={i} />
+              <Block data={i} className={i.new && styles.new} />
             </Fragment>
           ))}
           <span className={styles.addition}>

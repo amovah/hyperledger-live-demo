@@ -29,7 +29,7 @@ class Block extends Component {
 
     return (
       <div
-        className={css}
+        className={`${css} ${this.props.className}`}
       >
         <div
           className={styles.header}
