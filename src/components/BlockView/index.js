@@ -18,13 +18,13 @@ class BlockView extends Component {
       <div className={styles.container}>
         <div className={styles.takeSpace} />
         <div className={styles.content} ref={this.content}>
-          <span className={styles.addition}>
+          <div className={styles.addition}>
             being there
-          </span>
+          </div>
           {this.props.blocks.map((i, index) => (
             <Fragment key={i.blockhash}>
               {
-                index !== 0
+                  index !== 0
                 && (
                   <div
                     className={`${styles.connection} ${i.new && styles.new}`}
@@ -39,9 +39,9 @@ class BlockView extends Component {
               <Block data={i} className={i.new && styles.new} />
             </Fragment>
           ))}
-          <span className={styles.addition}>
+          <div className={styles.addition}>
             being there
-          </span>
+          </div>
         </div>
       </div>
     );
