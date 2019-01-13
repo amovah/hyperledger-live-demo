@@ -21,7 +21,7 @@ class BlockView extends Component {
           <span className={styles.addition}>
             being there
           </span>
-          {this.props.blocks.data.map((i, index) => (
+          {this.props.blocks.map((i, index) => (
             <Fragment key={i.blockhash}>
               {
                 index !== 0
