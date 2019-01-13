@@ -23,9 +23,8 @@ class BlockView extends Component {
           </span>
           {this.props.blocks.data.map((i, index) => (
             <Fragment key={i.blockhash}>
-              <Block data={i} />
               {
-                index + 1 !== this.props.blocks.length
+                index !== 0
                 && (
                   <div
                     className={styles.connection}
@@ -37,6 +36,7 @@ class BlockView extends Component {
                   </div>
                 )
               }
+              <Block data={i} />
             </Fragment>
           ))}
           <span className={styles.addition}>
