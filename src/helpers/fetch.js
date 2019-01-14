@@ -1,17 +1,15 @@
 import config from 'Root/config';
 
-export default async () => {
-  const res = await global.fetch(config.proxy, {
+export default async (to) => {
+  const res = await global.fetch(`${config.server}${to}`, {
     headers: {
       Accept: 'application/json',
     },
     method: 'GET',
   });
 
-  console.log(res);
-
-  // return {
-  //   res,
-  //   data: await res.json(),
-  // };
+  return {
+    res,
+    data: await res.json(),
+  };
 };
