@@ -1,6 +1,4 @@
 const config = {
-  prodCDN: '',
-  devCDN: `http://localhost:${process.env.NODE_PORT}/static`,
   server: 'http://localhost:3015/',
 };
 
