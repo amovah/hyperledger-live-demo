@@ -49,5 +49,5 @@ class BlockView extends Component {
 }
 
 export default connect(state => ({
-  blocks: state.blocks,
+  blocks: state.blocks.data,
 }))(BlockView);
