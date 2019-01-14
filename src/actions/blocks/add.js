@@ -1,9 +1,9 @@
 import types from 'Root/actions';
 import store from 'Root/store';
 
-export default async () => {
+export default async (data) => {
   store.dispatch({
     type: types.blocks.ADD,
-    // data: action.data.map(i => ({ ...i, new: true })),
+    data: data.map(i => ({ ...i, new: true })),
   });
 };
