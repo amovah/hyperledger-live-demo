@@ -1,19 +1,13 @@
 import types from 'Root/actions';
 
-export default (state = { data: [], lastTime: 0 }, action) => {
+export default (state = [], action) => {
   switch (action.type) {
     case types.blocks.LOAD: {
-      return {
-        data: action.data,
-        lastTime: action.time,
-      };
+      return action.data;
     }
 
     case types.blocks.ADD: {
-      return {
-        data: [...state.data, ...action.data],
-        lastTime: action.time,
-      };
+      return [...state.data, ...action.data];
     }
 
     default: {

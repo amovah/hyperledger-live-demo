@@ -4,6 +4,7 @@ import { render } from 'react-dom';
 import Loader from './components/Loader';
 import App from './App';
 import loadBlocks from './actions/blocks/load';
+import polling from './actions/blocks/polling';
 import './styles/index.less';
 
 render(
@@ -13,6 +14,7 @@ render(
 
 (async () => {
   await loadBlocks();
+  polling();
 
   render(
     <App />,

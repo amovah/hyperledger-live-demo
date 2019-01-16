@@ -3,7 +3,7 @@ import store from 'Root/store';
 import fetch from 'Root/helpers/fetch';
 
 export default async () => {
-  const res = await fetch(new Date(0).toString());
+  const res = await fetch();
 
   store.dispatch({
     type: types.blocks.LOAD,
