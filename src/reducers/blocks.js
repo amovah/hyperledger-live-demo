@@ -7,7 +7,7 @@ export default (state = [], action) => {
     }
 
     case types.blocks.ADD: {
-      return [...state.data, ...action.data];
+      return [...state, ...action.data];
     }
 
     default: {
