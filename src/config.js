@@ -1,5 +1,5 @@
 const config = {
-  server: 'http://localhost:3015/',
+  server: 'http://127.0.0.1:3015/',
 };
 
 if (process.env.NODE_ENV === 'development') {
