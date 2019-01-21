@@ -84,7 +84,7 @@ class Block extends Component {
               Create Date:
             </h3>
             <p>
-              {moment(data.created).format('dddd, MMMM Do YYYY, h:mm:ss a')}
+              {moment(data.createdt).format('dddd, MMMM Do YYYY, hh:mm:ss a')}
             </p>
           </div>
         </div>
