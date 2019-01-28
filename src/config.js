@@ -1,5 +1,5 @@
 const config = {
-  server: 'http://66.70.130.224:3015/',
+  server: 'http://66.70.130.225:3015/',
 };
 
 if (process.env.NODE_ENV === 'development') {
